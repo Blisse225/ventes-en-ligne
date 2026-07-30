@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INFORMATION SUR LE PRODUIS - Fatou Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Détail du produit</h1>
+
+<div id="detail-produit"></div>
+
+
+<script src="js/produits.js"></script>
+
+<script>
+
+let id = localStorage.getItem("produitSelectionne");
+
+let produit = produits.find(p => p.id == id);
+
+document.getElementById("detail-produit").innerHTML = `
+    <img src="${produit.image}" width="300">
+    <h2>${produit.nom}</h2>
+    <p>${produit.prix} FCFA</p>
+    <p>${produit.description}</p>
+`;
+
+</script>
+
+</body>
+</html>
