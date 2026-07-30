@@ -6,7 +6,7 @@ for (let i = 1; i <= 45; i++) {
         id: i,
         nom: "Drap 2 places " + i,
         prix: 4000,
-        image: "images/drap2place (" + i + ").jpg",
+        image: "drap2place (" + i + ").jpg",
         categorie: "Draps",
         description: "Drap 2 places confortable et élégant, parfait pour votre chambre."
     });
