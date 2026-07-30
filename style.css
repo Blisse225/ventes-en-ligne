@@ -1,278 +1,282 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+/* ============================
+   FATOU SHOP - STYLE COMPLET
+   Design professionnel + mobile
+============================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:#f5f5f5;
+body {
+    background: #f5f7fb;
+    color: #222;
+    overflow-x: hidden;
 }
 
-header{
-    background:#6a0dad;
-    color:white;
-    padding:15px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    position:sticky;
-    top:0;
-    z-index:1000;
+/* ============================
+            HEADER
+============================ */
+
+header {
+    background: linear-gradient(90deg, #6a0dad, #2575fc);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-.logo h1{
-    font-size:28px;
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.search{
-    display:flex;
-    width:45%;
-    background:white;
-    border-radius:30px;
-    overflow:hidden;
+.top-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.search input{
-    width:100%;
-    border:none;
-    outline:none;
-    padding:12px;
-    font-size:16px;
+/* Recherche */
+
+.search {
+    display: flex;
+    width: 45%;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
 }
 
-.search button{
-    border:none;
-    background:#ff9800;
-    color:white;
-    padding:0 20px;
-    cursor:pointer;
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 16px;
 }
 
-.icons{
-    display:flex;
-    gap:20px;
-    font-size:22px;
-    align-items:center;
+.search button {
+    border: none;
+    background: #ff9800;
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
 }
 
-.cart{
-    position:relative;
+/* Icônes */
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 22px;
 }
 
-.cart span{
-    position:absolute;
-    top:-8px;
-    right:-10px;
-    color:white;
-    border-radius:50%;
-    width:20px;
-    height:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:12px;
+.cart {
+    position: relative;
 }
 
-.banner{
-    margin:25px auto;
-    width:90%;
-    height:300px;
-    border-radius:20px;
-    background:linear-gradient(135deg,#6a0dad,#9c27b0);
-    color:white;
-    display:flex;
-    align-items:center;
-    padding:40px;
+#compteur-panier {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
 }
 
-.banner h2{
-    font-size:42px;
-    margin-bottom:15px;
+
+/* ============================
+             MENU
+============================ */
+
+.menu {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-.banner p{
-    font-size:18px;
-    margin-bottom:20px;
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
 }
 
-.banner a{
-    background:#ff9800;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:30px;
+.menu a:hover {
+    color: #FFD54F;
 }
 
+
+/* ============================
+            BANNIERE
+============================ */
+
+.banner {
+    width: 90%;
+    height: 300px;
+    margin: 25px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    background: linear-gradient(135deg,#6a0dad,#9c27b0);
+}
+
+.slide.active {
+    display: flex;
+}
+
+.banner h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+/* ============================
+        SECTIONS
+============================ */
+
+section,
 .categories,
-.products{
-    width:90%;
-    margin:40px auto;
+.products {
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-.categories h2,
-.products h2{
-    margin-bottom:20px;
+h2 {
+    margin-bottom: 20px;
 }
 
-.category-grid,
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
 
-.category,
-.product{
-    background:white;
-    border-radius:15px;
-    padding:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
-}
+/* ============================
+        GRILLE PRODUITS
+============================ */
 
-.category:hover,
-.product:hover{
-    transform:translateY(-8px);
-}
-
-.category img,
-.product img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-.product h3{
-    margin:15px 0 10px;
-}
-
-.product p{
-    color:#6a0dad;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.product button{
-    margin-top:15px;
-    width:100%;
-    border:none;
-    background:#6a0dad;
-    color:white;
-    padding:12px;
-    border-radius:10px;
-    cursor:pointer;
-}
-
-footer{
-    margin-top:50px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-.top-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-.menu{
-    margin-top:15px;
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.menu a:hover{
-    color:#FFD54F;
-}
-.banner{
-    position:relative;
-    overflow:hidden;
-    height:320px;
-}
-
-.slide{
-    position:absolute;
-    width:100%;
-    height:100%;
-    display:none;
-    align-items:center;
-    padding:40px;
-    color:white;
-    background:linear-gradient(135deg,#6a0dad,#9c27b0);
-    animation:fade .6s;
-}
-
-.slide.active{
-    display:flex;
-}
-
-@keyframes fade{
-    from{
-        opacity:0;
-    }
-    to{
-        opacity:1;
-    }
-}
+.product-grid,
 .grille-produits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px;
 }
 
+
+.product,
 .carte-produit {
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    background: white;
+    border-radius: 15px;
     padding: 15px;
     text-align: center;
-    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: .3s;
 }
 
+.product:hover,
+.carte-produit:hover {
+    transform: translateY(-5px);
+}
+
+
+.product img,
 .carte-produit img {
-    width: 170%;
+    width: 100%;
     height: 220px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
-.prix {
-    font-size: 18px;
+
+.product h3,
+.carte-produit h3 {
+    margin: 15px 0 10px;
+}
+
+
+.prix,
+.product p {
+    color: #6a0dad;
+    font-size: 20px;
     font-weight: bold;
 }
 
+
+/* ============================
+          BOUTONS
+============================ */
+
+.product button,
 .btn-panier {
-    background: #8e44ad;
-    color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 25px;
     cursor: pointer;
-}/* Style du panier */
-
-body {
-    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .3s;
 }
 
-h1 {
-    text-align: center;
-    margin: 30px;
+
+.product button:first-of-type {
+    background: #222;
 }
+
+
+.product button:last-of-type,
+.btn-panier {
+    background: linear-gradient(45deg,#ff7a00,#ffb300);
+}
+
+
+.product button:hover,
+.btn-panier:hover {
+    transform: scale(1.05);
+}
+
+
+/* ============================
+          PANIER
+============================ */
 
 #contenu-panier {
     width: 90%;
@@ -280,10 +284,11 @@ h1 {
     margin: auto;
 }
 
+
 .article-panier {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     background: white;
     padding: 15px;
     margin: 15px 0;
@@ -291,13 +296,14 @@ h1 {
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.article-panier h3 {
-    margin: 0;
+
+.article-panier img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.article-panier p {
-    font-weight: bold;
-}
 
 #total {
     text-align: center;
@@ -305,17 +311,26 @@ h1 {
     margin: 25px;
 }
 
+
 #valider {
     display: block;
+    width: 90%;
+    max-width: 500px;
     margin: auto;
     background: #25D366;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 15px;
     border-radius: 30px;
     font-size: 18px;
     cursor: pointer;
 }
+
+
+/* ============================
+       FORMULAIRE COMMANDE
+============================ */
+
 .formulaire-commande {
     width: 90%;
     max-width: 500px;
@@ -326,210 +341,23 @@ h1 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.formulaire-commande h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
 
 .formulaire-commande input {
     width: 100%;
     padding: 14px;
     margin: 10px 0;
+    border-radius: 10px;
     border: 1px solid #ddd;
-    border-radius: 10px;
     font-size: 16px;
-    box-sizing: border-box;
 }
+/* ============================
+       PAGE DETAIL PRODUIT
+============================ */
 
-.formulaire-commande input:focus {
-    outline: none;
-    border-color: #25D366;
-}
-
-#valider {
-    width: 100%;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-#valider:hover {
-    opacity: 0.9;
-}
-.article-panier img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.btn-panier {
-    background: linear-gradient(45deg, #ff7a00, #ffb300);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.btn-panier:hover {
-    transform: scale(1.05);
-    background: linear-gradient(45deg, #ff5e00, #ff9800);
-}
-.icone-panier {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background: #ff9800;
-    border-radius: 50%;
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.icone-panier:hover {
-    transform: scale(1.1);
-}
-
-#compteur-panier {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: red;
-    color: white;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-/* Nouvelle bannière Fatou Shop */
-
-.banner {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 20px;
-    margin: 20px;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s;
-}
-
-.banner:hover img {
-    transform: scale(1.05);
-}
-
-body{
-    background: #f5f7fb;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header{
-    background: linear-gradient(90deg,#6a11cb,#2575fc);
-    color: white;
-    padding: 15px 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
-section{
-    background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-/* Taille des images des produits */
-.produit img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-/* Taille de l'image dans la page détail */
-#detail-produit img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-/* Style des boutons produits */
-.produit button {
-    border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 25px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-
-/* Bouton Voir le produit */
-.produit button:first-of-type {
-    background: #222222;
-    color: white;
-}
-
-.produit button:first-of-type:hover {
-    background: #555;
-}
-
-
-/* Bouton Ajouter au panier */
-.produit button:last-of-type {
-    background: #e91e63;
-    color: white;
-}
-
-.produit button:last-of-type:hover {
-    background: #c2185b;
-}
-/* Page détail produit */
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f8f8f8;
-}
-
-
-h1 {
-    text-align: center;
-    color: #e91e63;
-    font-size: 35px;
-    margin-top: 30px;
-}
-
-
-/* Contenu du détail produit */
 #detail-produit {
-    width: 80%;
-    max-width: 500px;
-    margin: 30px auto;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
     background: white;
     padding: 25px;
     border-radius: 20px;
@@ -537,131 +365,174 @@ h1 {
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-
-/* Image */
 #detail-produit img {
     width: 300px;
+    max-width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 15px;
 }
 
-
-/* Nom du produit */
 #detail-produit h2 {
-    color: #222;
     font-size: 28px;
-    margin: 15px 0;
-    }
-    * Adaptation téléphone sans modifier la disposition des produits */
-@media (max-width: 600px) {
-
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* Menu */
-    header,
-    nav {
-        width: 100%;
-    }
-
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    /* Bannière */
-    .banner {
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .banner img {
-        max-width: 100%;
-    }
-
-    /* Texte de la bannière */
-    .banner h1 {
-        font-size: 24px;
-    }
-
-    .banner p {
-        font-size: 14px;
-    }
-
-    /* On laisse les produits comme ils sont */
-    .produit,
-    .produits,
-    #liste-produits {
-        /* aucune modification de disposition */
-    }
+    margin: 20px 0;
+    color: #6a0dad;
 }
-/* Correction mobile Fatou Shop */
+
+
+/* ============================
+              FOOTER
+============================ */
+
+footer {
+    margin-top: 50px;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* ============================
+        ADAPTATION TELEPHONE
+============================ */
+
 @media screen and (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
     }
 
-    header {
-        padding: 10px;
-        width: 100%;
-        display: flex;
+
+    .top-header {
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
+
 
     .logo h1 {
-        font-size: 24px;
+        font-size: 25px;
     }
 
+
     .search {
-        width: 95%;
-        margin: 10px 0;
+        width: 100%;
     }
+
 
     .icons {
         justify-content: center;
         gap: 15px;
     }
 
+
     .menu {
-        width: 100%;
-        gap: 15px;
-        justify-content: center;
+        gap: 12px;
+        margin-top: 15px;
     }
+
+
+    .menu a {
+        font-size: 14px;
+    }
+
 
     .banner {
-        width: calc(100% - 20px);
-        margin: 10px auto;
+        width: 95%;
         height: 220px;
+        margin: 15px auto;
     }
 
-    .banner h2 {
-        font-size: 25px;
-    }
 
     .slide {
         padding: 20px;
     }
 
+
+    .banner h2 {
+        font-size: 25px;
+    }
+
+
+    .banner p {
+        font-size: 14px;
+    }
+
+
+    section,
+    .categories,
+    .products {
+        width: 95%;
+        padding: 15px;
+    }
+
+
+    .product-grid,
     .grille-produits {
-        padding: 10px;
-        gap: 10px;
+
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
     }
 
+
+    .product,
+    .carte-produit {
+        padding: 10px;
+    }
+
+
+    .product img,
     .carte-produit img {
-        width: 100%;
+
         height: 160px;
+
     }
 
-    .produit img {
+
+    .product button,
+    .btn-panier {
+
         width: 100%;
-        height: auto;
+        font-size: 13px;
+        padding: 10px;
+
     }
+
+
+    .article-panier {
+
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+
+    }
+
+
+    #detail-produit img {
+
+        height: 250px;
+
+    }
+
 }
+
+
+/* Petits téléphones */
+
+@media screen and (max-width: 400px) {
+
+    .product-grid,
+    .grille-produits {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .banner h2 {
+        font-size: 22px;
+    }
+
 }
