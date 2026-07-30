@@ -552,6 +552,7 @@ h1 {
     color: #222;
     font-size: 28px;
     margin: 15px 0;
+    }
     * Adaptation téléphone sans modifier la disposition des produits */
 @media (max-width: 600px) {
 
