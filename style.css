@@ -536,3 +536,52 @@ footer {
     }
 
 }
+/* Correction image panier */
+
+.article-panier img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .article-panier {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .article-panier img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .article-panier h3 {
+        font-size: 14px;
+    }
+
+    .article-panier p {
+        font-size: 14px;
+    }
+}
+/* Image plus grande dans Voir le produit */
+
+#detail-produit img {
+    width: 380px;
+    height: 380px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+    #detail-produit img {
+        width: 330px;
+        height: 330px;
+    }
+
+}
