@@ -98,3 +98,72 @@ function changerQuantite(index, changement) {
 
     afficherPanier();
 }
+// ===============================
+// COMMANDE WHATSAPP
+// ===============================
+
+function commanderWhatsApp(){
+
+    let nom = document.getElementById("nom")?.value;
+    let quartier = document.getElementById("quartier")?.value;
+    let telephone = document.getElementById("telephone")?.value;
+
+
+    if(!nom || !quartier || !telephone){
+
+        alert("Veuillez remplir vos informations client");
+        return;
+
+    }
+
+
+    if(panier.length === 0){
+
+        alert("Votre panier est vide");
+        return;
+
+    }
+
+
+    let message = "Bonjour Fatou Shop 👋%0A%0A";
+    
+    message += "Nouvelle commande :%0A%0";
+
+
+    let total = 0;
+
+
+    panier.forEach((produit)=>{
+
+        let quantite = produit.quantite || 1;
+
+        let prix = produit.prix * quantite;
+
+        total += prix;
+
+
+        message += "🛍️ " + produit.nom;
+        message += " x" + quantite;
+        message += " - " + prix + " FCFA%0A";
+
+    });
+
+
+    message += "%0A💰 Total : " + total + " FCFA%0A%0A";
+
+
+    message += "👤 Nom : " + nom + "%0A";
+    message += "📍 Quartier : " + quartier + "%0A";
+    message += "📞 Téléphone : " + telephone;
+
+
+    // Remplacez par votre numéro WhatsApp Fatou Shop
+    let numero = "2250564554171";
+
+
+    let url = "https://wa.me/" + numero + "?text=" + message;
+
+
+    window.open(url, "_blank");
+
+}
