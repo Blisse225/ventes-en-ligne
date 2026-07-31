@@ -10,14 +10,7 @@ for (let i = 1; i <= 45; i++) {
         categorie: "Draps",
         description: "Drap 2 places confortable et élégant, parfait pour votre chambre avec 2 coussins."
     });
-{
-    id: i,
-    nom: "Drap 2 places",
-    prix: 8000,
-    image: "drap2places (" + i + ").jpg",
-    categorie: "Draps",
-    description: "Drap 2 places confortable et élégant pour votre chambre avec 2 coussins."
-}
+
 }
 
 
