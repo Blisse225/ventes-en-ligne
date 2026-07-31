@@ -1,5 +1,6 @@
 const produits = [];
 
+// Les 45 premiers draps
 for (let i = 1; i <= 45; i++) {
 
     produits.push({
@@ -11,6 +12,22 @@ for (let i = 1; i <= 45; i++) {
         description: "Drap 2 places confortable et élégant, parfait pour votre chambre avec 2 coussins."
     });
 
+}
+
+
+// Les 19 nouveaux draps
+for (let i = 1; i <= 19; i++) {
+
+    produits.push({
+        id: 45 + i,
+        nom: "Drap 2 places Premium " + i,
+        prix: 8000,
+        image: "drap2places (" + i + ").jpg",
+        categorie: "Draps",
+        description: "Drap 2 places premium confortable et élégant, idéal pour une chambre moderne avec 2 coussins."
+    });
+
+}
 }
 
 
