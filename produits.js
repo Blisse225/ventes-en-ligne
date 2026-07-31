@@ -28,7 +28,6 @@ for (let i = 1; i <= 19; i++) {
     });
 
 }
-}
 
 
 // Affichage des produits
